@@ -7,9 +7,10 @@
  * @param {string} s
  * @return {number}
  */
+//1.这道题首先将罗马数字与整数的对应情况用hash列出来，从双字母到单字母
+//2.对hash进行遍历，用while循环 看输入的罗马字符串中是否能匹配上hash的某一项，匹配一个就将字符串删减，同时将算的整数进行叠加
+//总感觉两次循环太浪费了,试了两个多小时，太菜了
 var romanToInt = function (s) {
-
-  var romanStr = ''
   var total = 0
   var Roman = {
     "IV": 4,
@@ -26,39 +27,21 @@ var romanToInt = function (s) {
     "D": 500,
     "M": 1000,
   }
-  for (let i in s) {
-    console.log(i)
-  }
   for (var x in Roman) {
-    debugger;
-    console.log(x);
     while (s.includes(x)) {
-      romanStr = romanStr + x
-      console.log(romanStr);
-      console.log(x);
-      console.log(s);
       s = deleteStr(s, x)
-      console.log(s);
-      console.log(romanStr);
-      console.log(Roman[x]);
       total = total + Roman[x]
-      console.log(total);
     }
-
-
   }
   return total
 };
-
+//从字符串中删除某个字符串
 var deleteStr = function (str, s) {
-
   var i = str.indexOf(s)
   var arr = str.split('')
   arr.splice(i, s.length)
-  console.log(arr);
   var strDelete = arr.join('')
   return strDelete
-  console.log(strDelete);
 
 }
 
