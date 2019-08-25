@@ -7,6 +7,7 @@
  * @param {number} x
  * @return {number}
  */
+
 var reverse = function (x) {
   const reversed = x.toString().split('').reverse().join('')
   if (parseInt(reversed) > 2 ** 31 - 1 || parseInt(reversed) < -1 * 2 ** 31) {
