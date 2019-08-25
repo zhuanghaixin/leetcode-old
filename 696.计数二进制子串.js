@@ -7,7 +7,6 @@
  * @param {string} s
  * @return {number}
  */
-
 var countBinarySubstrings = function (s) {
   // pre 前一个数字连续出现的次数，cur 当前数字连续出现的次数，result 结果子串个数
   let pre = 0,

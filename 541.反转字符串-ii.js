@@ -8,6 +8,7 @@
  * @param {number} k
  * @return {string}
  */
+
 var reverseStr = function (s, k) {
   var str = '';
   for (var i = 0; i < s.length; i = i + 2 * k) {

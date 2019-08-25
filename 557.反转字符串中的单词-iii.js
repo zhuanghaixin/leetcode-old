@@ -7,6 +7,7 @@
  * @param {string} s
  * @return {string}
  */
+
 var reverseWords = function (s) {
   return s.split(/\s/g).map(item => {
     return item.split('').reverse().join('')
