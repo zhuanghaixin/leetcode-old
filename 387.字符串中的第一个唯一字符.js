@@ -7,20 +7,51 @@
  * @param {string} s
  * @return {number}
  */
-var firstUniqChar = function (s) {
-  if(s.length===1){
-    return 0
-  }else{
-    for (let i = 0; i < s.length; i++) {
-      if (s.lastIndexOf(s[i]) === i  && s.indexOf(s[i])===i) {
-        console.log(i);
-        console.log(s[i])
-        return i
-      }
-    }
 
+var firstUniqChar = function (s) {
+  for (let v of s) {
+    if (s.indexOf(v) === s.lastIndexOf(v)) {
+      return s.indexOf(v);
+    }
   }
+  return -1;
+};
+
+
+/*
+var firstUniqChar = function (s) {
+
+  for (let i = 0; i < s.length; i++) {
+    if (s.lastIndexOf(s[i]) === i && s.indexOf(s[i]) === i) {
+      return i
+    }
+  }
+
+
 
   return -1
 };
+*/
 console.log(firstUniqChar("aadadaad"));
+//hash算法
+/*
+var firstUniqChar = function(s) {
+    let hash = new Map()
+    
+    for(let i = 0; i < s.length; i++) {
+        if(hash.has(s[i])) {
+            hash.set(s[i], hash.get(s[i]) + 1)
+        } else {
+            hash.set(s[i], 1)
+        }
+    }
+    
+    for(let i = 0; i < s.length; i++) {
+        if(hash.get(s[i]) == 1){
+            return i
+        }
+    }
+    return -1
+};
+
+*/
