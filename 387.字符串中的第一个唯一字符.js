@@ -8,6 +8,19 @@
  * @return {number}
  */
 var firstUniqChar = function (s) {
+  if(s.length===1){
+    return 0
+  }else{
+    for (let i = 0; i < s.length; i++) {
+      if (s.lastIndexOf(s[i]) === i  && s.indexOf(s[i])===i) {
+        console.log(i);
+        console.log(s[i])
+        return i
+      }
+    }
 
+  }
 
+  return -1
 };
+console.log(firstUniqChar("aadadaad"));
