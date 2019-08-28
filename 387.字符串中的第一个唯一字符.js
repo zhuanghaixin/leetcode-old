@@ -7,7 +7,7 @@
  * @param {string} s
  * @return {number}
  */
-
+/*
 var firstUniqChar = function (s) {
   for (let v of s) {
     if (s.indexOf(v) === s.lastIndexOf(v)) {
@@ -16,9 +16,9 @@ var firstUniqChar = function (s) {
   }
   return -1;
 };
+*/
 
 
-/*
 var firstUniqChar = function (s) {
 
   for (let i = 0; i < s.length; i++) {
@@ -31,8 +31,8 @@ var firstUniqChar = function (s) {
 
   return -1
 };
-*/
-console.log(firstUniqChar("aadadaad"));
+
+
 //hash算法
 /*
 var firstUniqChar = function(s) {
