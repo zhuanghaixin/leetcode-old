@@ -26,8 +26,10 @@ var subsets = function powerSet(str) {
   var result = [
     []
   ];
+
   for (var i = 0; i < array.length; i++) {
     var len = result.length;
+    //每次循环，将最后一个数组项与前面几个组合
     for (var x = 0; x < len; x++) {
       result.push(result[x].concat(array[i]))
     }
